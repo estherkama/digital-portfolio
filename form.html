@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Digital portifolio</title>
+<script type="text/javascript">  
+
+function validateemail()  
+    {  
+    var x=document.myform.email.value;  
+    var atposition=x.indexOf("@"); //method returns the first index at which a given element can be found in the array, or -1 if it is not present.  
+    var dotposition=x.lastIndexOf("."); //returns the index (position) of the last occurrence of a specified value in a string. 
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+    {
+        return true;
+    }
+    {  
+      alert("Please enter a valid e-mail address");  
+      return false;  
+      }  
+    }  
+function matchpass()
+{  
+var firstpassword=document.WAINAINA.password.value;  
+var secondpassword=document.WAINAINA.password2.value;  
+  
+if(firstpassword==secondpassword)
+{   
+    
+return true;  
+}  
+else
+{  
+alert("password must be same!");  
+return false;
+}  
+}  
+
+</script></head>
+    
+<body bgcolor="aqua"> 
+    <body bgcolor="aqua">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                   <a href="home.html"><img src="logo.jpg" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="home.html">Homepage</a></li>
+                        <li><a href="childhood.html">Childhood</a></li>
+                        <li><a href="education.html">Eduction</a></li>
+                        <li><a href="skills.html">Skills and Talents</a></li>
+                        <li><a href="future.html">Future Aspiration</a></li>
+                        <li><a href="contact.html"> contact information</a></li>
+                        <li><a href="form.html"> sign up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    <legend style="padding-left: 500px;padding-bottom: 50px;">sign up</legend>
+    <form  name="myform"  onsubmit="return validateemail();" style="padding: 10px">  
+    Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email"><br/><br>  
+      
+<form name="WAINAINA" onsubmit="return matchpass()">  
+Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;<input type="password" name="password" />
+<input type="reset" name="reset" value="Reset" /><br/></br>  
+Re-enter Password:<input type="password" name="password2"/><br/><br>  
+<input type="submit"> 
+</form> 
+</legend>
+</body>
+</html> 

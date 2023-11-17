@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">  
+
+function validateemail()  
+    {  
+    var x=document.myform.email.value;  
+    var atposition=x.indexOf("@"); //method returns the first index at which a given element can be found in the array, or -1 if it is not present.  
+    var dotposition=x.lastIndexOf("."); //returns the index (position) of the last occurrence of a specified value in a string. 
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+    {
+        return true;
+    }
+    {  
+      alert("Please enter a valid e-mail address");  
+      return false;  
+      }  
+    }  
+function matchpass()
+{  
+var firstpassword=document.WAINAINA.password.value;  
+var secondpassword=document.WAINAINA.password2.value;  
+  
+if(firstpassword==secondpassword)
+{   
+    
+return true;  
+}  
+else
+{  
+alert("password must be same!");  
+return false;
+}  
+}  
+
+</script>
+    <link rel="stylesheet" href="style.css">
+    <title>Digital portfolio</title>
+</head>
+
+<body bgcolor="aqua">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="home.html"><img src="logo.jpg" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="home.html">Homepage</a></li>
+                    <li><a href="childhood.html">Childhood</a></li>
+                    <li><a href="education.html">Eduction</a></li>
+                    <li><a href="skills.html">Skills and Talents</a></li>
+                    <li><a href="future.html">Future Aspiration</a></li>
+                    <li><a href="contact.html"> contact information</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <li> To continue!!.<a href="form.html"> sign up</a></li>
+    <a name="top"></a>
+    <form action="" style="background-color: bisque;">
+    <legend style="padding-left: 500px;padding-bottom: 50px;">sign up</legend>
+    <form  name="myform"  onsubmit="return validateemail();" style="padding: 10px">  
+    Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email"><br/><br>  
+      
+<form name="WAINAINA" onsubmit="return matchpass()">  
+Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;<input type="password" name="password" />
+<input type="reset" name="reset" value="Reset" /><br/></br>  
+Re-enter Password:<input type="password" name="password2"/><br/><br>  
+<input type="submit"> 
+</form> </form>
+</legend>
+
+    <h1>Just a brief introduction of myself</h1>
+    <H5><h3 style="font-size: larger; color: red;">ME</h3> 
+        My name is Esther Kamau,a female in gender.
+        <br>I'm a kenyan by nationality. Born in 2004 in Nakuru county,naivasha. <br>
+        Am currently in school, zetech university pursuing my degree in information communucation technology, <br>
+        Second year second semester now.
+        I do come from a family of five, 
+        made of three siblings and two lovely and supportive parents, mum and dad. <br> 
+        <h3 style="color:red;">Interest </h3>
+        I do spent my leisure time singing,
+        typing on my laptop,farming ,playing games and watching. <br>
+        I do also like coding after classes. <br>
+        <h3 style="color: red;">Goals</h3>
+        Am looking forward by the end of one and a half year now to have completed my degree. <br>
+        Then proceed to master while doing my job. Also plans 
+        <br>to invest in agrculuture and helping the needy,desperate young girls.
+    </H5>
+    <h1 style="color: red;"> <marquee>Its yours Esther, Kamau's Daughter.</marquee></h1>
+    <!---------------------footer------------------------------------------->
+    <div class="footer" style="background-color: aquamarine;">
+        <HR color = "red" size = "3">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <li><a href="home.html">Homepage</a></li>
+                    <li><a href="">Childhood</a></li>
+                    <li><a href="">Eduction</a></li>
+                    <li><a href="">Skills and Talents</a></li>
+                    <li><a href="">Future Aspiration</a></li>
+                    <li><a href=""> contact information</a></li> 
+                </div>
+                <div class="footer-col-4">
+                    <h3>follow me</h3>
+                  <a href="">
+                        <li>facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>github</li>
+                        <li>linkedin</li>
+                    </a>     
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">copyright 2023- Easy Tutorials</p>
+        </div>
+
+
+</body>
+</html>
